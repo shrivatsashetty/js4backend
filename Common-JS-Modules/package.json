@@ -1,0 +1,16 @@
+{
+  "name": "common-js-modules",
+  "version": "1.0.0",
+  "description": "Demo of how to use CJS(Common JS Modules)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cjs",
+    "node.js",
+    "modules"
+  ],
+  "author": "Shrivatsa Shetty",
+  "license": "ISC"
+}

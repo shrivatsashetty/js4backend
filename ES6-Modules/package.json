@@ -1,0 +1,19 @@
+{
+  "name": "es6-modules",
+  "version": "1.0.0",
+  "description": "sample of how to use JS ES6 Modules",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es6",
+    "node"
+  ],
+  "author": "Shrivatsa Shetty",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.6.6"
+  }
+}
