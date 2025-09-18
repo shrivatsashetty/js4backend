@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Demo of how to use CJS(Common JS Modules)",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
