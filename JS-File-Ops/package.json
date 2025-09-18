@@ -1,0 +1,13 @@
+{
+  "name": "js-file-ops",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Shrivatsa Shetty",
+  "license": "ISC",
+  "description": "A demo Node.js project to practice working with files and directories"
+}
