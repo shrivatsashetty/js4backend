@@ -1,0 +1,19 @@
+{
+  "name": "node-https",
+  "version": "1.0.0",
+  "main": "server.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js",
+    "dev": "nodemon server.js"
+  },
+
+  "keywords": ["fetch", "api", "server"],
+  "author": "Shrivatsa Shetty",
+  "license": "ISC",
+  "description": "Simple HTTP server using Node.js",
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  }
+}
