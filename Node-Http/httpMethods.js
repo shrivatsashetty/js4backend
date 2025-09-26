@@ -4,7 +4,6 @@
  * */
 
 import http from "http";
-import path from "path";
 
 import {URL} from "url";
 
@@ -12,7 +11,7 @@ const PORT = 49519;
 
 // In-memory data store (for demonstration)
 let todos = [
-    { id: 1, task: 'Learn Node.js', completed: false },
+    { id: 1, task: 'Learn Node.js', completed: true },
     { id: 2, task: 'Build an HTTP Server', completed: false }
 ];
 
@@ -78,7 +77,7 @@ const server = http.createServer((req, res) => {
     }
     // route: PUT /todos/:id
     else if (method === "PUT" && pathname.startsWith("/todos/")) {
-        const id = pathname.split("/")[2];
+        const id = parseInt(pathname.split('/')[2]);
 
         let body = "";
 
@@ -110,7 +109,25 @@ const server = http.createServer((req, res) => {
 
         });
     }
+    // Route: DELETE /todos/:id
+    else if (method === 'DELETE' && pathname.startsWith('/todos/')) {
+        const id = parseInt(pathname.split('/')[2]);
+        const index = todos.findIndex(todo => todo.id === id);
 
+        if (index === -1) {
+            res.writeHead(404, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ error: 'Todo not found' }));
+        } else {
+            todos = todos.filter(todo => todo.id !== id);
+            res.writeHead(204); // request successfully fullfilled but nothing to return 
+            res.end();
+        }
+    }
+    // 404 Not Found
+    else {
+        res.writeHead(404, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Not Found' }));
+    }
 
 
 });
@@ -135,4 +152,6 @@ curl -X PUT http://localhost:49519/todos/2 \
 -H "Content-Type: application/json" \
 -d '{ "task": "Build a simple API", "completed": true}'
 
+for DELETE:
+curl -X DELETE http://localhost:49519/todos/2
 */
