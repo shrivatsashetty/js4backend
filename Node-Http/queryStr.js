@@ -38,6 +38,7 @@ const server = http.createServer((req, res) => {
         reqUrl,
         parsedUrl,
         searchParams,
+        params,
         queryObj,
         querystr,
     }, null, 2));

@@ -17,14 +17,13 @@ const server = http.createServer(
 		// Get specific headers (case-insensitive)
 		const userAgent = req.headers['user-agent'];
 		const acceptLanguage = req.headers['accept-language'];
-		const host = req.headers.host;
+		const host = req.headers.host; // returns a combo of the host IP and port no i.e a socket
 
 		// /* using object destructuring */
 		// const {url, method} = req;
 
 		/* creating a URL object */
-		const socket = req.headers.host; // returns a combo of the host IP and port no i.e a socket
-		const baseUrl = `http://${socket}`
+		const baseUrl = `http://${host}`
 		const objParsedUrl = new URL(req.url, baseUrl);
 
 		// Get different parts of the URL
@@ -55,7 +54,7 @@ const server = http.createServer(
 					userAgent,
 					acceptLanguage,
 					httpMethod: req.method,
-					// parsedUrl,
+					// objParsedUrl,
 					pathName,
 					query,
 				}, null, 2
