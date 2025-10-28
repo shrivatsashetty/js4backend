@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* custom styles */
+.color-red {
+    color: red;
+}
+

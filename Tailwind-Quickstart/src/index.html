@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav
+            class="bg-amber-300 flex items-center flex-col-reverse sm:flex-row sm:justify-between p-2"
+        >
+            <ul class="flex justify-between space-x-3 color-red">
+                <li>Home</li>
+                <li>About</li>
+                <li>Sign Up</li>
+            </ul>
+
+            <div class="title">Shrivatsa</div>
+        </nav>
+
+        <main class="p-4">
+            <div
+                class="flex flex-col sm:flex-row bg-gray-800 p-4 rounded-lg text-white gap-4"
+            >
+                <!-- Thumbnail Container -->
+                <div class="relative w-full sm:w-64 shrink-0">
+                    <img
+                        class="w-full h-auto rounded-md shadow-xl"
+                        src="assets/sample-image.jpg"
+                        alt="Thumbnail Image"
+                    />
+
+                    <!-- Timestamp Label (bottom-right corner) -->
+                    <span
+                        class="absolute bottom-2 right-2 bg-gray-700/80 text-xs px-1.5 py-0.5 rounded"
+                    >
+                        36:40
+                    </span>
+                </div>
+
+                <!-- Video Info -->
+                <div class="flex flex-col gap-y-1.5">
+                    <h2 class="text-lg font-medium leading-snug">
+                        Installing VS Code & How Websites Work | Sigma Web
+                        Development Course - Tutorial #1
+                    </h2>
+                    <h3 class="text-xs sm:text-sm text-gray-300">
+                        <span>CodeWithHarry</span> · <span>727K</span> views ·
+                        <span>2 months ago</span>
+                    </h3>
+                </div>
+            </div>
+        </main>
+
+    </body>
+</html>
